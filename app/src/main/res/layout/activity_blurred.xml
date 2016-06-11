@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:id="@+id/background"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/starbutton"
+        android:layout_toLeftOf="@+id/imageButton"
+        android:inputType="text"
+        android:hint="请输入搜索内容"
+        android:ems="12"
+        android:id="@+id/search_k"
+        android:layout_alignParentTop="true" />
+
+    <ImageButton
+        android:src="@android:drawable/ic_menu_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/search_k"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/imageButton" />
+
+    <ImageButton
+        android:src="@drawable/abc_btn_rating_star_off_mtrl_alpha"
+        android:layout_width="55sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/starbutton"
+        android:layout_alignBottom="@+id/search_k" />
+
+</RelativeLayout>
