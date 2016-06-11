@@ -65,7 +65,6 @@ public class Search extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(Search.this, Favorite_list.class);
                 startActivity(intent);
-                finish();
             }
         });
 

@@ -174,7 +174,7 @@ public class Item_list extends Activity {
         try {
             htmlContent = GetHtmlBody.getHtml(url,tex,page+1);
             String pattern1="title\":\".*?,";
-            String pattern2="price\":\".*?,";
+            String pattern2="\"price\":\".*?,";
             String pattern3="pic_path\":\".*?,";
             String pattern4="item_id\":\".*?,";
             String pattern5="sold\":\".*?,";
@@ -194,7 +194,7 @@ public class Item_list extends Activity {
                 out_title = out_title.replace("title\":\"","");
                 out_title = out_title.replace(",","");
                 out_title = out_title.replace("\"","");
-                out_price = out_price.replace("price\":\"","");
+                out_price = out_price.replace("\"price\":\"","");
                 out_price = out_price.replace(",","");
                 out_price = out_price.replace("\"","");
                 out_pic = out_pic.replace("pic_path\":\"","");

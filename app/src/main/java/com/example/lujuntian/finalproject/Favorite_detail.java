@@ -128,6 +128,7 @@ public class Favorite_detail extends Activity {
                 from = TestRegex.match(fromGet,htmlContent);
                 title = title.replace("\"title\":\"","");
                 title = title.replace("\",","");
+                title = title.replace("\"},","");
                 price = price.replace("\"priceText\":\"","");
                 price = price.replace("\",","");
                 deliPrice = deliPrice.replace("\",","");
@@ -206,6 +207,13 @@ public class Favorite_detail extends Activity {
         });
 
     }
+
+    public void onBackPressed(){
+        Intent intent = new Intent(Favorite_detail.this, Favorite_list.class);
+        startActivity(intent);
+        finish();
+    }
+
 
 
     public String dialog(String dialog) {       //提示框

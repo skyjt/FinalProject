@@ -67,6 +67,7 @@ public class Favorite_list extends Activity {
                 intent.putExtra("img_url",putpic);
                 //intent.putExtra("name",tex);
                 startActivity(intent);
+                finish();
 
             }
         });
@@ -182,17 +183,12 @@ public class Favorite_list extends Activity {
                     String title = Item_title.get(i);
                     String price = Item_price.get(i);
                     String pic = Item_pic.get(i);
-                    //String sold = Item_sold.get(i);
-                    //id = id.replace("item_id=", "");
-                    //id = id.replace(",", "");
                     title = title.replace("item_title=", "");
                     title = title.replace(",", "");
                     price = price.replace("item_price=", "");
                     price = price.replace(",", "");
                     pic = pic.replace("item_pic=", "");
                     pic = pic.replace(",", "");
-                    //sold = sold.replace("item_sold", "");
-                    //sold = sold.replace(",", "");
 
                     HashMap<String, Object> map = new HashMap<String, Object>();
                     map.put("ItemImage", pic);
@@ -204,21 +200,19 @@ public class Favorite_list extends Activity {
                 }
             }else {
                 for (int i = (page_now-1)*10; i < sum*page_now; i++) {
-                    //String id = Item_id.get(i);
+
                     String title = Item_title.get(i);
                     String price = Item_price.get(i);
                     String pic = Item_pic.get(i);
-                    //String sold = Item_sold.get(i);
-                    //id = id.replace("item_id=", "");
-                    //id = id.replace(",", "");
+
                     title = title.replace("item_title=", "");
                     title = title.replace(",", "");
+                    title = title.replace("\"}","");
+
                     price = price.replace("item_price=", "");
                     price = price.replace(",", "");
                     pic = pic.replace("item_pic=", "");
                     pic = pic.replace(",", "");
-                    //sold = sold.replace("item_sold", "");
-                    //sold = sold.replace(",", "");
 
                     HashMap<String, Object> map = new HashMap<String, Object>();
                     map.put("ItemImage", pic);
@@ -235,14 +229,6 @@ public class Favorite_list extends Activity {
         }
 
     }
-
-    //public void onBackPressed(){
-    //    Intent intent = new Intent(Fav_list.this, Search.class);
-    //    //intent.putExtra("search_content",name);
-    ///    startActivity(intent);
-     //   finish();
-     //   return;
-    //}
 
 
     public String dialog2(String dialog) {       //提示框

@@ -23,7 +23,8 @@
             android:orientation="horizontal">
             <TextView
                 android:id="@+id/tv1"
-                android:ellipsize="marquee"
+                android:ellipsize="end"
+                android:maxLines="2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="3dp"

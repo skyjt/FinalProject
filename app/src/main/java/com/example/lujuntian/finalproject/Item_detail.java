@@ -148,6 +148,7 @@ public class Item_detail extends Activity {
                 from = TestRegex.match(fromGet,htmlContent);
                 title = title.replace("\"title\":\"","");
                 title = title.replace("\",","");
+                title = title.replace("\"},","");
                 price = price.replace("\"priceText\":\"","");
                 price = price.replace("\",","");
                 deliPrice = deliPrice.replace("\",","");
